@@ -1,0 +1,19 @@
+.Dashboard-main{
+    margin:auto;
+    padding: 20px;
+    width: 50%;
+    font-family: Helvetica;
+    text-align: center;
+}
+
+.Card-group{
+    margin:auto;
+    padding: 5px;
+    text-align: center;
+}
+
+.Card-title{
+    color:white;
+    padding:10px;
+}
+

@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
+import NavbarComponent from "./components/NavbarComponent"
+import Dashboard from "./components/DashboardComponent"
+import './App.css'
+//Great tutorial on react routing: https://reactrouter.com/web/guides/primary-components
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       current_page:"/home"
+    }
+  }
+  
+  render() {
+    const{current_page} = this.state
+    return (
+      <Router>
+        <div className = "App-header">
+         <NavbarComponent/>
+         <Redirect to = {current_page}/>
+          <Switch>
+          <Route path = "/home">
+                <h2>Home Page</h2>
+            </Route>
+            <Route path = "/dashboard">
+              <Dashboard/>
+            </Route>
+     
+            <Route path = "/statistics">
+                <h3>Dream Stats</h3>
+            </Route>
+          </Switch>
+          
+        </div>
+      </Router>
+       
+      
+    )
+  }
 }
 
-export default App;
+export default App
+
