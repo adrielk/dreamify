@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Button } from 'react-bootstrap
+import { Card, Button } from 'react-bootstrap'
 
 //https://v4-alpha.getbootstrap.com/utilities/close-icon/ (code for x button)
 
