@@ -4,12 +4,16 @@
     width: 50%;
     font-family: Helvetica;
     text-align: center;
+    background-color: rgb(67, 70, 73);
+    border-radius: 4px;
+    box-shadow: 5px 10px;
 }
 
 .Card-group{
     margin:auto;
     padding: 5px;
     text-align: center;
+    
 }
 
 .Card-title{

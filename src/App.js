@@ -2,8 +2,13 @@ import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
 import NavbarComponent from "./components/NavbarComponent"
 import Dashboard from "./components/DashboardComponent"
+import StatView from "./components/StatComponent"
 import './App.css'
 //Great tutorial on react routing: https://reactrouter.com/web/guides/primary-components
+//Plotly quickstart: https://plotly.com/javascript/react/
+
+//AWS backend API
+
 
 class App extends Component {
 
@@ -11,7 +16,7 @@ class App extends Component {
     super(props)
   
     this.state = {
-       current_page:"/home"
+       current_page:"/dashboard"
     }
   }
   
@@ -23,15 +28,15 @@ class App extends Component {
          <NavbarComponent/>
          <Redirect to = {current_page}/>
           <Switch>
-          <Route path = "/home">
+          {/* <Route path = "/home">
                 <h2>Home Page</h2>
-            </Route>
+            </Route> */}
             <Route path = "/dashboard">
               <Dashboard/>
             </Route>
      
             <Route path = "/statistics">
-                <h3>Dream Stats</h3>
+                <StatView/>
             </Route>
           </Switch>
           

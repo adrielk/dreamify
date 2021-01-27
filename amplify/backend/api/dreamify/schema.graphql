@@ -1,0 +1,6 @@
+type Dream @model {
+  id: ID!
+  name: String!
+  description: String
+  date: String
+}
