@@ -10,6 +10,11 @@
       "StackName": "amplify-dreamify-dev-05447",
       "StackId": "arn:aws:cloudformation:us-east-1:345838036189:stack/amplify-dreamify-dev-05447/019eb540-5f9b-11eb-96b3-0e51aa6fabf5",
       "AmplifyAppId": "d3v4ww05i73zyy"
+    },
+    "categories": {
+      "auth": {
+        "dreamifyc8ffc3da": {}
+      }
     }
   }
 }
